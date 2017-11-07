@@ -11,7 +11,9 @@ var task = require('./routes/task');
 //MongoDB Setup (Mongoose)
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/julian', {useMongoClient: true})
+var mongo_url = "mongodb://julian21olarte:julian21olarte@ds249565.mlab.com:49565/rokk3rlab_todolist";
+//mongoose.connect('mongodb://localhost:27017/julian', {useMongoClient: true})
+mongoose.connect(mongo_url, {useMongoClient: true})
 .then( () => {
   console.log('Conexion a DB correcta...');
 })
